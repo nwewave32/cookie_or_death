@@ -1,0 +1,109 @@
+@import "reset.css";
+@import "style.css";
+
+.container {
+  width: 100%;
+  margin: 0px auto;
+}
+
+.sidebar-left {
+  width: 25%;
+  height: 30vh;
+  float: left;
+}
+#content {
+  width: 50%;
+  height: 40vh;
+  margin-top: 30vh;
+  float: left;
+  animation: floating 1.3s ease-in-out infinite;
+  text-align: center;
+  position: relative;
+}
+#content #title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: azure;
+}
+#content img {
+  width: 45vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@keyframes floating {
+  0% {
+    transform: translateY(-4px);
+  }
+  20% {
+    transform: translateY(-7px);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-13px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  90% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(-4px);
+  }
+}
+#content h1 {
+  font-size: 8vw;
+}
+#content h2 {
+  font-size: 6vw;
+}
+.sidebar-right {
+  width: 25%;
+  height: 30vh;
+  margin-bottom: 40vh;
+  float: right;
+}
+#content:hover {
+  cursor: pointer;
+}
+#top-left:hover {
+  transform: translateX(60%);
+  transition: 3s;
+}
+#top-right:hover {
+  transform: translateY(60%);
+  transition: 2s;
+}
+#btm-left:hover {
+  transform: translateY(-60%);
+  transition: 1.5s;
+}
+#btm-right:hover {
+  transform: translateX(-60%);
+  transition: 0.5s;
+}
+.hover img {
+}
+/* #top-left img{position: absolute; left: calc(-200px); top: calc(0vh);  }
+#top-right img{position: absolute; left: calc(100vw - 200px); top: calc(-200px); }
+#btm-left img{position: absolute; left: calc(0vw); top: calc(100vh + 200px); }
+#btm-right img{position: absolute; left: calc(100vw + 200px); top: calc(100vh - 200px); } */
+#top-left img {
+  transform: translate(-55%, 0px);
+}
+#top-right img {
+  transform: translate(0px, -55%) rotate(90deg);
+}
+#btm-left img {
+  transform: translate(0px, 80%) rotate(270deg);
+}
+#btm-right img {
+  transform: translate(50%, 0px) rotate(180deg);
+}

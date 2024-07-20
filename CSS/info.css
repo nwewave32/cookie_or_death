@@ -1,0 +1,47 @@
+@import "reset.css";
+@import "style.css";
+
+section {
+  position: relative;
+}
+
+#content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  min-width: 40%;
+  min-height: 30%;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+  animation: floating 1.3s ease-in-out infinite;
+}
+@keyframes floating {
+  0% {
+    transform: translateY(-4px) translate(-50%, -50%);
+  }
+  20% {
+    transform: translateY(-8px) translate(-50%, -50%);
+  }
+  40% {
+    transform: translateY(-12px) translate(-50%, -50%);
+  }
+  60% {
+    transform: translateY(-16px) translate(-50%, -50%);
+  }
+  80% {
+    transform: translateY(-10px) translate(-50%, -50%);
+  }
+  100% {
+    transform: translateY(-5px) translate(-50%, -50%);
+  }
+}
+#content h1 {
+  font-family: "Love Ya Like A Sister", cursive;
+  font-size: 1.8rem;
+  text-align: center;
+}
