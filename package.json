@@ -5,9 +5,11 @@
   "homepage": "https://nwewave32.github.io/cookie_or_death/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx parcel build src/index.html src/cookieType.html src/info.html src/lang.html --public-url /cookie_or_death/",
+    "build": "rm -rf dist .parcel-cache && npx parcel build src/*.html src/JS/*.js --dist-dir dist --public-url /cookie_or_death/ src/IMG/metro/*.png --no-content-hash",
     "predeploy": "npm run build",
-    "deploy": "npx gh-pages -d dist"
+    "deploy": "npx gh-pages -d dist",
+    "generate-file-list": "node generateFileList.js",
+    "postbuild": "npm run generate-file-list"
   },
   "keywords": [],
   "author": "",
