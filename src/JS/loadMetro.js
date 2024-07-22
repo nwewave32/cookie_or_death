@@ -1,5 +1,5 @@
 export function loadMetro(num) {
-  if (num === undefined) num = 0;
+  if (num === undefined || num === null) num = 0;
 
   const background = document.querySelector("#background");
   const newIMG = document.createElement("img");
