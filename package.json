@@ -5,7 +5,7 @@
   "homepage": "https://nwewave32.github.io/cookie_or_death/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build src/index.html",
+    "build": "npx parcel build src/*.html src/JS/*.js src/IMG/*.png src/CSS/*.css --public-url /cookie_or_death/",
     "predeploy": "npm run build",
     "deploy": "npx gh-pages -d dist"
   },
