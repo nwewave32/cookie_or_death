@@ -361,4 +361,4 @@ function init() {
 }
 init();
 },{"./translate.js":"UAxc"}]},{},["J2Td"], null)
-//# sourceMappingURL=/cookie_or_death/sectionJS.de4d9be3.js.map
+//# sourceMappingURL=/cookie_or_death/sectionJS.e8f6b6e6.js.map

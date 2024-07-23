@@ -117,14 +117,32 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"orRZ":[function(require,module,exports) {
-var content = document.querySelector('#content');
-function handleClick(event) {
-  location.href = "lang.html";
+})({"CLKh":[function(require,module,exports) {
+var footer = document.querySelector("footer"),
+  li = footer.querySelectorAll("li");
+var menu;
+function handleMouseOut(event) {
+  menu = event.target;
+  menu.innerText = "more";
+}
+function handleMouseOver(event) {
+  menu = event.target;
+  if (menu.id == "main") {
+    menu.innerText = "one more time";
+  } else if (menu.id == "type") {
+    menu.innerText = "more cookies";
+  } else if (menu.id == "info") {
+    menu.innerText = "more info";
+  } else if (menu.id == "lang") {
+    menu.innerText = "more lang";
+  }
 }
 function init() {
-  content.addEventListener('click', handleClick);
+  for (var i = 0; i < li.length; i++) {
+    li[i].addEventListener("mouseover", handleMouseOver);
+    li[i].addEventListener("mouseout", handleMouseOut);
+  }
 }
 init();
-},{}]},{},["orRZ"], null)
-//# sourceMappingURL=/cookie_or_death/mainJS.c1c43e44.js.map
+},{}]},{},["CLKh"], null)
+//# sourceMappingURL=/cookie_or_death/footerJS.181c9b72.js.map

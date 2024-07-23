@@ -49,7 +49,7 @@ body,
   width: 100%;
   height: 100%;
   overflow: hidden;
-  cursor: url("/cookie_or_death/images/cookie4.252e19fe.png"), auto;
+  cursor: url("/cookie_or_death/images/cookie4.1ee90c98.png"), auto;
 }
 body,
 .wrap,
@@ -60,7 +60,7 @@ footer {
 }
 body {
   background-color: rgb(15, 13, 41);
-  background-image: url(/cookie_or_death/back.b3deebc6.gif);
+  background-image: url(/cookie_or_death/back.2681614d.gif);
 }
 
 a {
@@ -247,40 +247,82 @@ footer .container .text {
   }
 }
 
-.container {
-  width: 100%;
-  margin: 0px auto;
+section {
+  color: white;
+}
+.on {
+  display: block;
+}
+.off {
+  display: none;
 }
 
-.sidebar-left {
-  width: 25%;
-  height: 30vh;
-  float: left;
-}
-#content {
-  width: 50%;
-  height: 40vh;
-  margin-top: 30vh;
-  float: left;
-  animation: floating 1.3s ease-in-out infinite;
+#start {
   text-align: center;
+  color: white;
+  font-size: 4vw;
+}
+#start button {
+  font-size: 3vw;
+  margin-top: 2vw;
+}
+#start button:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#qna {
+  margin: 0 auto;
+  width: 90vw;
+  height: 25vw;
+  align-items: center;
+}
+#qna div {
+  float: left;
+  width: 14vw;
+  height: 14vw;
+  margin: 2vw;
+  cursor: pointer;
+}
+#qna img {
   position: relative;
+  width: 14vw;
+  height: 14vw;
+  margin: -15vh 3vw 0 1vw;
 }
-#content #title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: azure;
+
+#qna #p0 {
+  animation: floating 1.5s ease-in-out infinite;
 }
-#content img {
-  width: 45vw;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+#qna #p1 {
+  animation: floating 1.3s ease-in-out infinite;
 }
+#qna #p2 {
+  animation: floating 1.8s ease-in-out infinite;
+}
+#qna #p3 {
+  animation: floating 1.6s ease-in-out infinite;
+}
+#qna #p4 {
+  animation: floating 1.4s ease-in-out infinite;
+}
+
+#qna #p0 img {
+  transform: rotate(60deg);
+}
+#qna #p1 img {
+  transform: rotate(90deg);
+}
+#qna #p2 img {
+  transform: rotate(180deg);
+}
+#qna #p3 img {
+  transform: rotate(0deg);
+}
+#qna #p4 img {
+  transform: rotate(270deg);
+}
+
 @keyframes floating {
   0% {
     transform: translateY(-4px);
@@ -304,55 +346,6 @@ footer .container .text {
     transform: translateY(-4px);
   }
 }
-#content h1 {
-  font-size: 8vw;
-}
-#content h2 {
-  font-size: 6vw;
-}
-.sidebar-right {
-  width: 25%;
-  height: 30vh;
-  margin-bottom: 40vh;
-  float: right;
-}
-#content:hover {
-  cursor: pointer;
-}
-#top-left:hover {
-  transform: translateX(60%);
-  transition: 3s;
-}
-#top-right:hover {
-  transform: translateY(60%);
-  transition: 2s;
-}
-#btm-left:hover {
-  transform: translateY(-60%);
-  transition: 1.5s;
-}
-#btm-right:hover {
-  transform: translateX(-60%);
-  transition: 0.5s;
-}
-.hover img {
-}
-/* #top-left img{position: absolute; left: calc(-200px); top: calc(0vh);  }
-#top-right img{position: absolute; left: calc(100vw - 200px); top: calc(-200px); }
-#btm-left img{position: absolute; left: calc(0vw); top: calc(100vh + 200px); }
-#btm-right img{position: absolute; left: calc(100vw + 200px); top: calc(100vh - 200px); } */
-#top-left img {
-  transform: translate(-55%, 0px);
-}
-#top-right img {
-  transform: translate(0px, -55%) rotate(90deg);
-}
-#btm-left img {
-  transform: translate(0px, 80%) rotate(270deg);
-}
-#btm-right img {
-  transform: translate(50%, 0px) rotate(180deg);
-}
 
 
-/*# sourceMappingURL=/cookie_or_death/main.1e3fc04e.css.map */
+/*# sourceMappingURL=/cookie_or_death/type.b1bda5c4.css.map */

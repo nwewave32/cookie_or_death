@@ -49,7 +49,7 @@ body,
   width: 100%;
   height: 100%;
   overflow: hidden;
-  cursor: url("/cookie_or_death/images/cookie4.252e19fe.png"), auto;
+  cursor: url("/cookie_or_death/images/cookie4.1ee90c98.png"), auto;
 }
 body,
 .wrap,
@@ -60,7 +60,7 @@ footer {
 }
 body {
   background-color: rgb(15, 13, 41);
-  background-image: url(/cookie_or_death/back.b3deebc6.gif);
+  background-image: url(/cookie_or_death/back.2681614d.gif);
 }
 
 a {
@@ -247,159 +247,50 @@ footer .container .text {
   }
 }
 
-.button {
-  font-size: 1.1rem;
-}
-button {
-  font-size: 1.1rem;
-}
-.bottom button {
-  font-size: 2vw;
-}
-
-section .wrapTranslator {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-section .translator {
-  margin: 0 auto;
-  width: 35%;
-  height: 50%;
-  color: rgba(253, 253, 253, 0.877);
-}
-.top {
-  width: 100%;
-  height: 10%;
-}
-.mid {
-  width: 100%;
-  height: 35vh;
-}
-.btm {
-  width: 100%;
-  height: 10%;
-}
-
-#left {
-  height: 100%;
-}
-#left .top {
-  display: flex;
-}
-#left .top .text {
-  width: 80%;
-  font-size: 1.05em;
-  background-color: rgb(255, 255, 255);
-  color: rgba(10, 10, 10, 0.685);
-  line-height: 2.5rem;
-  padding-left: 10px;
-}
-#left .top #change {
-  width: 20%;
-}
-#left .top .button {
-  width: 100%;
-  height: 100%;
-  white-space: nowrap;
-  font-size: 1.05em;
-  color: rgb(15, 13, 41);
-}
-#left .mid {
+section {
   position: relative;
 }
-#left .mid form {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-textarea::placeholder {
-  color: rgba(253, 253, 253, 0.6);
-}
-#left .mid form textarea {
-  box-sizing: border-box;
-  padding: 8px;
-  width: 100%;
-  height: 100%;
-  border: none;
-  outline: none;
-  resize: none;
-  overflow: auto;
-  background-color: rgba(255, 255, 255, 0.397);
-  font-family: "Love Ya Like A Sister", cursive;
-  font-size: larger;
-  color: aliceblue;
-}
-#left .mid #textLen {
+
+#content {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  text-align: right;
-  font-size: 0.5em;
-  padding: 5px;
-  color: black;
-}
-#left .btm button {
-  width: 100%;
-  padding: 10px 12px;
-  pointer-events: none;
-  color: gray;
-}
-
-#right .top .text {
-  line-height: 2.5rem;
-  padding-left: 10px;
-  font-size: 1.05em;
-  background-color: white;
-  color: rgba(10, 10, 10, 0.685);
-}
-#right .mid .text {
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.397);
-  overflow: auto;
-  padding: 1vh 1.5vw;
-  color: black;
-}
-#right .btm {
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  min-width: 40%;
+  min-height: 30%;
+  background-color: blue;
   display: flex;
-  width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+  animation: floating 1.3s ease-in-out infinite;
 }
-#right .btm #copy,
-#share {
-  width: 100%;
+@keyframes floating {
+  0% {
+    transform: translateY(-4px) translate(-50%, -50%);
+  }
+  20% {
+    transform: translateY(-8px) translate(-50%, -50%);
+  }
+  40% {
+    transform: translateY(-12px) translate(-50%, -50%);
+  }
+  60% {
+    transform: translateY(-16px) translate(-50%, -50%);
+  }
+  80% {
+    transform: translateY(-10px) translate(-50%, -50%);
+  }
+  100% {
+    transform: translateY(-5px) translate(-50%, -50%);
+  }
 }
-#right .btm .button {
-  width: 100%;
-  padding: 10px 12px;
-}
-
-.modal_body.show #share {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+#content h1 {
+  font-family: "Love Ya Like A Sister", cursive;
+  font-size: 1.8rem;
   text-align: center;
-  margin: 20px 0;
-}
-.modal_body.show #share a {
-  font-size: 10px;
-  text-align: center;
-  text-decoration-line: none;
-  color: black;
-}
-
-.modal_body .text {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.3em;
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-#modal_close {
-  cursor: pointer;
 }
 
 
-/*# sourceMappingURL=/cookie_or_death/lang.068c1d5c.css.map */
+/*# sourceMappingURL=/cookie_or_death/info.6e68184c.css.map */
