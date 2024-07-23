@@ -1,0 +1,351 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,button {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: 'Love Ya Like A Sister', cursive;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+button{cursor: pointer;}
+html,
+body,
+.wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: url("/cookie_or_death/images/cookie4.252e19fe.png"), auto;
+}
+body,
+.wrap,
+header,
+section,
+footer {
+  margin: 0 auto; /*border: black dashed 0.01px;*/
+}
+body {
+  background-color: rgb(15, 13, 41);
+  background-image: url(/cookie_or_death/back.b3deebc6.gif);
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+#background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 1;
+}
+#background img {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  width: 100%;
+  z-index: -3;
+}
+.rotimg {
+  width: 100vw;
+  animation: rotation 50s infinite linear;
+  transform-origin: center center;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.wrapAll {
+  display: block;
+  z-index: 2;
+  height: 100%;
+}
+
+header {
+  padding: 24px 0;
+}
+section {
+  width: 100%;
+  height: 65%;
+}
+footer {
+}
+
+header .container {
+  color: rgba(255, 255, 255, 0.747);
+}
+header .container .text {
+  font-size: 2rem;
+  padding-top: 2vh;
+}
+header #siteName {
+  padding-right: 4vw;
+  text-align: right;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+header .container .text h3 {
+  text-align: center;
+  font-size: 150%;
+  line-height: 8vh;
+}
+
+section .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+footer .container ul {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  padding: 24px;
+  align-items: center;
+}
+
+footer .container ul li {
+  margin: 0 auto;
+  font-size: 1.4em;
+  text-align: center;
+  position: relative;
+  width: 150px; /* 필요한 너비로 설정 */
+  overflow: visible; /* 넘친 텍스트 숨기기 */
+  white-space: nowrap; /* 줄 바꿈 없음 */
+}
+
+footer li a {
+  color: rgb(255, 255, 255);
+  display: block;
+  width: 100%; /* 링크 요소가 li 요소 전체를 차지하도록 설정 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+footer .container .text {
+  margin: 0 auto;
+  font-size: 0.5em;
+
+  text-align: center;
+  color: white;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.modal.show {
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+}
+.modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.432);
+}
+.modal_body.show {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 30%;
+  padding: 18px 24px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 51;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .wrap {
+    display: none;
+  }
+  .modal.hidden {
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+  }
+  .modal_body.hidden {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    padding: 40px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 51;
+  }
+}
+
+section {
+  color: white;
+}
+.on {
+  display: block;
+}
+.off {
+  display: none;
+}
+
+#start {
+  text-align: center;
+  color: white;
+  font-size: 4vw;
+}
+#start button {
+  font-size: 3vw;
+  margin-top: 2vw;
+}
+#start button:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#qna {
+  margin: 0 auto;
+  width: 90vw;
+  height: 25vw;
+  align-items: center;
+}
+#qna div {
+  float: left;
+  width: 14vw;
+  height: 14vw;
+  margin: 2vw;
+  cursor: pointer;
+}
+#qna img {
+  position: relative;
+  width: 14vw;
+  height: 14vw;
+  margin: -15vh 3vw 0 1vw;
+}
+
+#qna #p0 {
+  animation: floating 1.5s ease-in-out infinite;
+}
+#qna #p1 {
+  animation: floating 1.3s ease-in-out infinite;
+}
+#qna #p2 {
+  animation: floating 1.8s ease-in-out infinite;
+}
+#qna #p3 {
+  animation: floating 1.6s ease-in-out infinite;
+}
+#qna #p4 {
+  animation: floating 1.4s ease-in-out infinite;
+}
+
+#qna #p0 img {
+  transform: rotate(60deg);
+}
+#qna #p1 img {
+  transform: rotate(90deg);
+}
+#qna #p2 img {
+  transform: rotate(180deg);
+}
+#qna #p3 img {
+  transform: rotate(0deg);
+}
+#qna #p4 img {
+  transform: rotate(270deg);
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(-4px);
+  }
+  20% {
+    transform: translateY(-7px);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-13px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  90% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(-4px);
+  }
+}
+
+
+/*# sourceMappingURL=/cookie_or_death/type.7d5cb4db.css.map */

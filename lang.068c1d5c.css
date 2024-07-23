@@ -1,0 +1,405 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,button {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: 'Love Ya Like A Sister', cursive;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+button{cursor: pointer;}
+html,
+body,
+.wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: url("/cookie_or_death/images/cookie4.252e19fe.png"), auto;
+}
+body,
+.wrap,
+header,
+section,
+footer {
+  margin: 0 auto; /*border: black dashed 0.01px;*/
+}
+body {
+  background-color: rgb(15, 13, 41);
+  background-image: url(/cookie_or_death/back.b3deebc6.gif);
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+#background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 1;
+}
+#background img {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  width: 100%;
+  z-index: -3;
+}
+.rotimg {
+  width: 100vw;
+  animation: rotation 50s infinite linear;
+  transform-origin: center center;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.wrapAll {
+  display: block;
+  z-index: 2;
+  height: 100%;
+}
+
+header {
+  padding: 24px 0;
+}
+section {
+  width: 100%;
+  height: 65%;
+}
+footer {
+}
+
+header .container {
+  color: rgba(255, 255, 255, 0.747);
+}
+header .container .text {
+  font-size: 2rem;
+  padding-top: 2vh;
+}
+header #siteName {
+  padding-right: 4vw;
+  text-align: right;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+header .container .text h3 {
+  text-align: center;
+  font-size: 150%;
+  line-height: 8vh;
+}
+
+section .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+footer .container ul {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  padding: 24px;
+  align-items: center;
+}
+
+footer .container ul li {
+  margin: 0 auto;
+  font-size: 1.4em;
+  text-align: center;
+  position: relative;
+  width: 150px; /* 필요한 너비로 설정 */
+  overflow: visible; /* 넘친 텍스트 숨기기 */
+  white-space: nowrap; /* 줄 바꿈 없음 */
+}
+
+footer li a {
+  color: rgb(255, 255, 255);
+  display: block;
+  width: 100%; /* 링크 요소가 li 요소 전체를 차지하도록 설정 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+footer .container .text {
+  margin: 0 auto;
+  font-size: 0.5em;
+
+  text-align: center;
+  color: white;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.modal.show {
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+}
+.modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.432);
+}
+.modal_body.show {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 30%;
+  padding: 18px 24px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 51;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .wrap {
+    display: none;
+  }
+  .modal.hidden {
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+  }
+  .modal_body.hidden {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    padding: 40px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 51;
+  }
+}
+
+.button {
+  font-size: 1.1rem;
+}
+button {
+  font-size: 1.1rem;
+}
+.bottom button {
+  font-size: 2vw;
+}
+
+section .wrapTranslator {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section .translator {
+  margin: 0 auto;
+  width: 35%;
+  height: 50%;
+  color: rgba(253, 253, 253, 0.877);
+}
+.top {
+  width: 100%;
+  height: 10%;
+}
+.mid {
+  width: 100%;
+  height: 35vh;
+}
+.btm {
+  width: 100%;
+  height: 10%;
+}
+
+#left {
+  height: 100%;
+}
+#left .top {
+  display: flex;
+}
+#left .top .text {
+  width: 80%;
+  font-size: 1.05em;
+  background-color: rgb(255, 255, 255);
+  color: rgba(10, 10, 10, 0.685);
+  line-height: 2.5rem;
+  padding-left: 10px;
+}
+#left .top #change {
+  width: 20%;
+}
+#left .top .button {
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  font-size: 1.05em;
+  color: rgb(15, 13, 41);
+}
+#left .mid {
+  position: relative;
+}
+#left .mid form {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+textarea::placeholder {
+  color: rgba(253, 253, 253, 0.6);
+}
+#left .mid form textarea {
+  box-sizing: border-box;
+  padding: 8px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.397);
+  font-family: "Love Ya Like A Sister", cursive;
+  font-size: larger;
+  color: aliceblue;
+}
+#left .mid #textLen {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  font-size: 0.5em;
+  padding: 5px;
+  color: black;
+}
+#left .btm button {
+  width: 100%;
+  padding: 10px 12px;
+  pointer-events: none;
+  color: gray;
+}
+
+#right .top .text {
+  line-height: 2.5rem;
+  padding-left: 10px;
+  font-size: 1.05em;
+  background-color: white;
+  color: rgba(10, 10, 10, 0.685);
+}
+#right .mid .text {
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.397);
+  overflow: auto;
+  padding: 1vh 1.5vw;
+  color: black;
+}
+#right .btm {
+  display: flex;
+  width: 100%;
+}
+#right .btm #copy,
+#share {
+  width: 100%;
+}
+#right .btm .button {
+  width: 100%;
+  padding: 10px 12px;
+}
+
+.modal_body.show #share {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+.modal_body.show #share a {
+  font-size: 10px;
+  text-align: center;
+  text-decoration-line: none;
+  color: black;
+}
+
+.modal_body .text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3em;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+#modal_close {
+  cursor: pointer;
+}
+
+
+/*# sourceMappingURL=/cookie_or_death/lang.068c1d5c.css.map */
