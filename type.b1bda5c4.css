@@ -251,20 +251,20 @@ section {
   color: white;
 }
 .on {
-  display: block;
+  visibility: visible;
 }
 .off {
-  display: none;
+  visibility: hidden;
 }
 
 #start {
   text-align: center;
   color: white;
-  font-size: 4vw;
+  font-size: 2.5em;
 }
 #start button {
-  font-size: 3vw;
-  margin-top: 2vw;
+  font-size: 2.3rem;
+  margin-top: 20px;
 }
 #start button:hover {
   color: white;
@@ -273,22 +273,18 @@ section {
 
 #qna {
   margin: 0 auto;
-  width: 90vw;
-  height: 25vw;
+  margin-top: -50px;
+  padding: 0 24px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 #qna div {
-  float: left;
-  width: 14vw;
-  height: 14vw;
-  margin: 2vw;
   cursor: pointer;
 }
 #qna img {
   position: relative;
-  width: 14vw;
-  height: 14vw;
-  margin: -15vh 3vw 0 1vw;
+  max-width: 150px;
 }
 
 #qna #p0 {

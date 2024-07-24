@@ -125,30 +125,12 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.loadMetro = loadMetro;
 function loadMetro(num) {
-  if (num == undefined || num == null) num = 0;
+  if (num == undefined || num == null || isNaN(num)) num = 0;
   var background = document.querySelector("#background");
   //background 아이디 가진 속성 밑에 자식으로 img 만들어서 넣어줄거임
   var newIMG = document.createElement("img");
   newIMG.className = "rotimg";
   newIMG.src = "./images/metro".concat(num, ".png");
-
-  // const publicUrl = process.env.PUBLIC_URL || "";
-  // console.log("##publicUrl", publicUrl);
-  // const imagePath = new URL(
-  //   `.${publicUrl}/IMG/metro/metro${num}.png`,
-  //   import.meta.url
-  // );
-  // console.log("##imagePath", imagePath);
-  // newIMG.src = imagePath.href;
-
-  // import(`../IMG/metro${num}.png`)
-  //   .then((module) => {
-  //     newIMG.src = module.default;
-  //     background.appendChild(newIMG);
-  //   })
-  //   .catch((error) => {
-  //     console.error(`Error loading image: ${error}`);
-  //   });
   background.appendChild(newIMG);
 }
 var num = localStorage.getItem("metroNum");
@@ -157,28 +139,35 @@ loadMetro(num);
 "use strict";
 
 var _loadMetro = require("./loadMetro.js");
-var start = document.querySelector('#start'),
-  startBtn = start.querySelector('button');
-var qna = document.querySelector('#qna'),
-  div = qna.querySelectorAll('div');
+var start = document.querySelector("#start"),
+  startBtn = start.querySelector("button");
+var qna = document.querySelector("#qna"),
+  div = qna.querySelectorAll("div");
 function handleSelect(event) {
-  var img = document.querySelector('#background').querySelector('.rotimg');
-  img.remove();
+  var imgs = document.querySelector("#background").querySelectorAll(".rotimg");
+  for (var index = 0; index < imgs.length; index++) {
+    imgs[index].remove();
+    if (imgs[index]) imgs[index].style.visibility = "hidden";
+  }
   var selec = event.target.parentNode;
   var strNum = selec.id.substring(1);
   var num = parseInt(strNum);
+  if (isNaN(num)) {
+    strNum = event.target.id.substring(1);
+    num = parseInt(strNum);
+  }
   localStorage.setItem("metroNum", num);
   (0, _loadMetro.loadMetro)(num);
 }
 function handleStartBtn(event) {
-  start.classList.add('off');
-  qna.classList.add('on');
-  qna.classList.remove('off');
+  start.classList.add("off");
+  qna.classList.add("on");
+  qna.classList.remove("off");
 }
 function init() {
-  startBtn.addEventListener('click', handleStartBtn);
+  startBtn.addEventListener("click", handleStartBtn);
   for (var i = 0; i < div.length; i++) {
-    div[i].addEventListener('click', handleSelect);
+    div[i].addEventListener("click", handleSelect);
   }
 }
 init();

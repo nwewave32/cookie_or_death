@@ -125,30 +125,12 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.loadMetro = loadMetro;
 function loadMetro(num) {
-  if (num == undefined || num == null) num = 0;
+  if (num == undefined || num == null || isNaN(num)) num = 0;
   var background = document.querySelector("#background");
   //background 아이디 가진 속성 밑에 자식으로 img 만들어서 넣어줄거임
   var newIMG = document.createElement("img");
   newIMG.className = "rotimg";
   newIMG.src = "./images/metro".concat(num, ".png");
-
-  // const publicUrl = process.env.PUBLIC_URL || "";
-  // console.log("##publicUrl", publicUrl);
-  // const imagePath = new URL(
-  //   `.${publicUrl}/IMG/metro/metro${num}.png`,
-  //   import.meta.url
-  // );
-  // console.log("##imagePath", imagePath);
-  // newIMG.src = imagePath.href;
-
-  // import(`../IMG/metro${num}.png`)
-  //   .then((module) => {
-  //     newIMG.src = module.default;
-  //     background.appendChild(newIMG);
-  //   })
-  //   .catch((error) => {
-  //     console.error(`Error loading image: ${error}`);
-  //   });
   background.appendChild(newIMG);
 }
 var num = localStorage.getItem("metroNum");

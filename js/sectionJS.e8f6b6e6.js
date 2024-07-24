@@ -285,11 +285,11 @@ function handleKeyup(event) {
   n = targetTxt.length;
   leftTextLen.innerText = "".concat(n, "/1000");
   if (mode == "eng") {
-    var regAlphabet = /^[a-zA-Z0-9^? ]*$/;
+    var regAlphabet = /^[a-zA-Z0-9?.!\n ]*$/;
     var isAlphabet = regAlphabet.test(targetTxt);
     setStyleSubmitBtn(isAlphabet && targetTxt.trim().length !== 0);
   } else if (mode == "alien") {
-    var regAlienel = /^[ΩζξБпㅥ0-9^? ]*$/;
+    var regAlienel = /^[ΩζξБпㅥ0-9?.!˙\n ]*$/;
     var isAlienel = regAlienel.test(targetTxt);
     setStyleSubmitBtn(isAlienel && targetTxt.trim().length !== 0);
   }
