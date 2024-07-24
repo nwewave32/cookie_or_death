@@ -105,11 +105,11 @@ function handleKeyup(event) {
   leftTextLen.innerText = `${n}/1000`;
 
   if (mode == "eng") {
-    const regAlphabet = /^[a-zA-Z0-9^? ]*$/;
+    const regAlphabet = /^[a-zA-Z0-9?.!\n ]*$/;
     const isAlphabet = regAlphabet.test(targetTxt);
     setStyleSubmitBtn(isAlphabet && targetTxt.trim().length !== 0);
   } else if (mode == "alien") {
-    const regAlienel = /^[ΩζξБпㅥ0-9^? ]*$/;
+    const regAlienel = /^[ΩζξБпㅥ0-9?.!˙\n ]*$/;
     const isAlienel = regAlienel.test(targetTxt);
     setStyleSubmitBtn(isAlienel && targetTxt.trim().length !== 0);
   }

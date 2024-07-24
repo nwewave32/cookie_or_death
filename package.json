@@ -5,16 +5,62 @@
   "homepage": "https://nwewave32.github.io/cookie_or_death/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf dist .parcel-cache && npx parcel build src/*.html src/JS/*.js --dist-dir dist --public-url /cookie_or_death/ src/IMG/metro/*.png --no-content-hash",
+    "build": "rm -rf dist .parcel-cache && npx parcel build src/*.html --public-url /cookie_or_death/ --no-minify src/IMG/metro/*.png --no-content-hash",
     "predeploy": "npm run build",
-    "deploy": "npx gh-pages -d dist",
-    "generate-file-list": "node generateFileList.js",
-    "postbuild": "npm run generate-file-list"
+    "deploy": "npx gh-pages -d dist"
+  },
+  "targets": {
+    "default": {
+      "distDir": "./dist",
+      "publicUrl": "./",
+      "context": "browser",
+      "engines": {
+        "browsers": "> 0.25%, not dead"
+      },
+      "includeNodeModules": true,
+      "outputFormat": "esmodule",
+      "sourceMaps": false,
+      "minify": true
+    },
+    "images": {
+      "distDir": "./dist/images",
+      "publicUrl": "./images",
+      "context": "browser",
+      "engines": {
+        "browsers": "> 0.25%, not dead"
+      },
+      "includeNodeModules": true,
+      "outputFormat": "esmodule",
+      "sourceMaps": false,
+      "minify": true,
+      "contentHash": false
+    }
+  },
+  "customDistStructure": {
+    "config": {
+      ".js": "js",
+      "images": [
+        ".jpg",
+        ".png"
+      ],
+      ".fileExtension": "folder/in/dist",
+      "folder/in/dist": [
+        ".file",
+        ".extensions"
+      ]
+    },
+    "options": {
+      "development": true
+    }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.12.0"
+    "parcel": "^2.12.0",
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-custom-dist-structure": "^1.1.20",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10"
   }
 }
