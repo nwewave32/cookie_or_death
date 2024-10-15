@@ -33,3 +33,4 @@ dist/
 
 .git
 package-lock.json
+.gitignore
