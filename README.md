@@ -51,11 +51,11 @@
 ---
 
 
-#🍪 Cookie or Death 👾
+# 🍪 Cookie or Death 👾
 
 **Cookie or Death** is a fun website based on the story of an alien who loves meteors and comes to Earth. The alien, obsessed with cookies that resemble meteors, comes to Earth and uses a translator to communicate with Earthlings. Now, you can communicate with the alien and customize cookies to your liking! 👾
 
-##🍪 Table of Contents
+## 🍪 Table of Contents
 
 1. [Introduction](#introduction)
 2. [Features](#features)
@@ -64,17 +64,17 @@
 5. [Contributing](#contributing)
 6. [License](#license)
 
-##🍪 Introduction
+## 🍪 Introduction
 
 For fans of aliens, this is a website you can't miss! **Cookie or Death** is a web project based on the unique story of an alien who comes to Earth to communicate with humans, driven by its love for meteors and cookies. Enjoy translating between alien and human languages, and have fun customizing cookies. 👾
 
-##🍪 Features
+## 🍪 Features
 
 - **Alien -> English Translation**: Translate the alien's language into English and communicate.👾
 - **English -> Alien Translation**: Convert Earth languages into the alien's language.👾
 - **Change Cookies**: Experience various types of cookies loved by the alien.👾
 
-##🍪 Getting Started
+## 🍪 Getting Started
 
 Visit the website via the link below:
 
@@ -82,18 +82,18 @@ Visit the website via the link below:
 
 No installation or download is required; it runs directly in your browser.
 
-##🍪 How to Play
+## 🍪 How to Play
 
 1. Visit the site using the link provided.
 2. Try out the alien to English and English to alien translation features.👾
 3. Customize the color of the cookies to your liking!
 4. Have fun interacting with the alien.👾
 
-##🍪 Contributing
+## 🍪 Contributing
 
 If you'd like to contribute to this project, feel free to submit a pull request or open an issue in the GitHub repository.
 
-## License
+## 🍪 License
 
 This project is open source and is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
