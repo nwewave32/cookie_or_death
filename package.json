@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf dist .parcel-cache && GENERATE_SOURCEMAP=false npx parcel build src/*.html --public-url /cookie_or_death/ --no-minify src/IMG/metro/*.png --no-content-hash",
     "predeploy": "npm run build",
-    "copy-assets": "cp -r src/IMG/metro",
+    "copy-assets": "cp -r src/IMG/metro dist/IMG",
     "deploy": "npm run build && npm run copy-assets && npx gh-pages -d dist"
   },
   "targets": {
