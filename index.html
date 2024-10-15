@@ -38,5 +38,9 @@
 
     <script>var parcelRequire;</script>
     <script type="module" src="/cookie_or_death/js/mainJS.60a1ef2a.js"></script>
+    <script>var path = window.location.pathname;
+if (path.endsWith(".html")) {
+  window.history.replaceState(null, null, path.slice(0, -5));
+}</script>
   </body>
 </html>

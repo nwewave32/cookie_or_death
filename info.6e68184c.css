@@ -291,6 +291,9 @@ section {
   font-size: 1.8rem;
   text-align: center;
 }
+h1 a:hover {
+  color: #fff;
+}
 
 
 /*# sourceMappingURL=/cookie_or_death/info.6e68184c.css.map */
