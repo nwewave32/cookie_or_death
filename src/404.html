@@ -1,8 +1,38 @@
-<!-- 404.html -->
-<script>
-  var path = window.location.pathname;
+<!DOCTYPE html>
+<html id="index">
+  <head>
+    <title>Cookie or Death..</title>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./IMG/cookie4.png" />
+    <link rel="stylesheet" href="./CSS/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px;
+      "
+    >
+      <h1 style="color: aliceblue; font-size: xx-large">404</h1>
+    </div>
 
-  if (path.endsWith(".html")) {
-    window.history.replaceState(null, null, path.slice(0, -5));
-  }
-</script>
+    <script>
+      var parcelRequire;
+    </script>
+    <script>
+      var path = window.location.pathname;
+
+      if (path.endsWith(".html")) {
+        window.history.replaceState(null, null, path.slice(0, -5));
+      }
+    </script>
+  </body>
+</html>

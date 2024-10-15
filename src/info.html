@@ -3,6 +3,7 @@
   <head>
     <title>Cookie or Death..</title>
     <meta charset="utf-8" />
+    <link rel="icon" href="./IMG/cookie4.png" />
     <link rel="stylesheet" href="./CSS/info.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap"
@@ -27,7 +28,7 @@
               <h1>email: nwewave.32@gmail.com</h1>
               <h1>
                 web:
-                <a href="https://nwewave32.github.io/portfolio/">nwewave32</a>
+                <a href="https://nwewave32.github.io/portfolio/">nwewave web</a>
               </h1>
             </div>
           </section>
@@ -56,5 +57,12 @@
     </script>
     <script type="module" src="./JS/footerJS.js"></script>
     <script type="module" src="./JS/loadMetro.js"></script>
+    <script>
+      var path = window.location.pathname;
+
+      if (path.endsWith(".html")) {
+        window.history.replaceState(null, null, path.slice(0, -5));
+      }
+    </script>
   </body>
 </html>

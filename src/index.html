@@ -43,5 +43,12 @@
       var parcelRequire;
     </script>
     <script type="module" src="./JS/mainJS.js"></script>
+    <script>
+      var path = window.location.pathname;
+
+      if (path.endsWith(".html")) {
+        window.history.replaceState(null, null, path.slice(0, -5));
+      }
+    </script>
   </body>
 </html>
